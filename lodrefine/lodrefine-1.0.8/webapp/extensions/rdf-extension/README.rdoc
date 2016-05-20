@@ -1,0 +1,46 @@
+=RDF-Extension
+
+This project was originally developed by DERI as an extension for Google Refine that added:
+* reconcilation services for registered SPARQL endpoints
+* a graphical user interface(GUI) for exporting data of Google Refine projects in RDF format. The export is based on mapping the data to a template graph using the GUI.
+
+The repository has been forked and updated to work with OpenRefine, next (updated) version of Google Refine.
+This extension is now also a part of LODRefine -- LOD-enabled version of OpenRefine (http://github.com/sparkica/OpenRefine)
+
+== INSTALL & BUILD
+
+1. Pull OpenRefine's code from repository: http://github.com/OpenRefine/OpenRefine
+2. Pull this repository into extensions folder within OpenRefine
+3. Rename this folder to "rdf-extension"
+4. Update extensions/build.xml file with two lines in build and clean ant task:
+
+The two lines that need to be added are:
+	<ant dir="rdf-export/" target="build" />
+	<ant dir="rdf-export/" target="clean" />
+
+The buil.xml should then look something like this:
+  
+  <project name="google-refine-extensions" default="build" basedir=".">
+  <target name="build">
+    <echo message="Building extensions" />
+    <ant dir="sample/" target="build" />
+    <ant dir="jython/" target="build" />
+    <ant dir="freebase/" target="build" />
+    <ant dir="gdata/" target="build" />
+    <ant dir="rdf-extension/" target="build" />
+  </target>
+
+  <target name="clean">
+    <echo message="cleaning extensions" />
+    <ant dir="sample/" target="clean" />
+    <ant dir="jython/" target="clean" />
+    <ant dir="freebase/" target="clean" />
+    <ant dir="gdata/" target="clean" />
+    <ant dir="rdf-extension/" target="clean" />
+  </target>
+  </project>
+
+
+Build OpenRefine project using ./refine build and run it with ./refine run.
+If extension was loaded properly, you'll se RDF menu in extensions bar of the OpenRefine window after a project is loaded.
+

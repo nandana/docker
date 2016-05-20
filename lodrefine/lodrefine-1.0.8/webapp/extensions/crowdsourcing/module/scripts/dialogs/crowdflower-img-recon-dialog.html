@@ -1,0 +1,73 @@
+<div class="dialog-frame" style="width: 800px;">
+    <div class="dialog-header" bind="dialogHeader"></div>
+    <div class="dialog-body" bind="dialogBody">
+        <div class="grid-layout layout-normal layout-full"
+            style="height: 400px; overflow: auto">
+
+            <div class="refine-tabs ui-tabs ui-tabs-nav" bind="jobTabs" id="jobTabs">
+                <ul>
+                    <li><a href="#tab2" bind="uploadTab"></a></li>
+                </ul>
+                <div id="tab2">
+            <div class="job-box">
+                <div class="field-container">
+                    <label bind="selectJobLabel"></label>
+                    <div id="job-list" bind="jobList">
+                    <select id="all_jobs" bind="allJobsList"></select>
+                    </div>
+                </div><!-- ./field-container -->
+                <div class="field-container">
+                    <label bind="imgUrlLabel"></label>
+                    <select name="img_url" bind="imgUrlColumn"></select>
+                </div><!-- ./field-container -->
+                <div class="field-container">
+                    <label bind="imgDescriptionLabel"></label>
+                    <select name="img_desc" bind="imgDescColumn"></select>
+                </div><!-- ./field-container -->
+                <div class="field-container">
+                    <label bind="destUrlLabel"></label>
+                    <select name="dest_url" bind="destUrlColumn"></select>
+                </div><!-- ./field-container -->
+
+         </div>
+         <div class="job-box">
+         <h3 bind="optionsLabel"></h3>
+                <div class="wrapper">
+            <div class="column-left">
+            <h3 bind="goldDataLabel"></h3>
+                <div class="field-container">
+                <label bind="uploadGoldLabel"></label>
+                <input type="checkbox" id="upload-gold" bind="uploadGoldBtn"><br/>
+                </div><!-- ./field-container -->
+            <br/>
+            <div id="gold-data-panel" bind="goldDataPanel">
+                    <div class="field-container">
+                    <label bind="selectGoldColLabel"></label>
+                    <select name="gold_data" bind="goldDataColumn"></select>
+                </div><!-- ./field-container -->
+                </div> <!-- ./gold-data-panel -->
+              </div>
+              <div class="column-right">
+                <h3 bind="additionalInfoLabel"></h3>
+                <label bind="selColsLabel"></label>
+                <p class="text-info" bind="infoTemplateUpdate"></p>
+                <div id="info-fields" bind="infoField" class="project-columns">
+                </div>
+            </div><!-- ./column right -->
+            </div> 
+              </div> <!-- ./job box -->
+                </div>
+                <!-- /tab2 -->
+            </div>
+        </div>
+
+    </div>
+    <!-- ./dialog-body -->
+    <div class="dialog-footer" bind="dialogFooter">
+    <div id="msg-frame">
+        <p id="status-message" bind="statusMessage"></p>
+    </div>
+        <button class="btn btn-success" bind="okButton"></button>
+        <button class="btn" bind="cancelButton"></button>
+    </div>
+</div>

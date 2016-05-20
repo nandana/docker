@@ -1,0 +1,27 @@
+<div class="dialog-frame extend-data-preview-dialog"
+	style="width: 800px;">
+	<div class="dialog-header" bind="dialogHeader"></div>
+	<div class="dialog-body" bind="dialogBody">
+		<div class="grid-layout layout-normal layout-full">
+			<table rows="2">
+				<tr>
+					<td width="300" height="1"><h3 bind="zemext_preview_header"></h3></td>
+					<td height="1"><h3 bind="zemext_preview_preview"></h3></td>
+					<td height="1" width="1%" style="text-align:right;">
+						<button class="btn btn-inverse" bind="resetButton"></button></td>
+				</tr>
+				<tr>
+					<td width="300" style="vertical-align: top;"><div
+							class="suggested-property-container"
+							bind="suggestedPropertyContainer"></div></td>
+					<td style="vertical-align: top;" colspan="2"><div
+							class="preview-container" bind="previewContainer" style="overflow:scroll;"></div></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="dialog-footer" bind="dialogFooter">
+		<button class="btn btn-success" bind="okButton"></button>
+		<button class="btn" bind="cancelButton"></button>
+	</div>
+</div>

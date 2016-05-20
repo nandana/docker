@@ -1,0 +1,207 @@
+/*
+
+Copyright 2012, Zemanta Ltd.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,           
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY           
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+@import-less url("../theme.less");
+
+#columns-dialog {
+    background: #fff;
+    color: #000;
+}
+
+#columns-dialog input[type=radio] +label {display: block !important;}
+
+
+.project-columns {
+    -moz-column-count: 2;
+    -moz-column-gap: 3px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 3px;
+    column-count: 2;
+    column-gap: 3px;
+    height: 100px;
+    overflow:auto;
+}
+
+.project-columns.small {
+    -moz-column-count: 2;
+    -moz-column-gap: 2px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 2px;
+    column-count: 2;
+    column-gap: 2px;
+    height: 70px;
+    overflow:auto;
+}
+
+.project-columns.tiny {
+    -moz-column-count: 1;
+    -moz-column-gap: 2px;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 2px;
+    column-count: 1;
+    column-gap: 2px;
+    height: 50px;
+    overflow:auto;
+}
+
+.project-columns input[type=checkbox] + label { display:inline !important; }
+
+#copy-job-options input[type=radio] + label {display: inline !important;}
+
+
+.job-title, .job-instructions{
+    width: 280px;
+}
+.job-instructions{
+    height: 100px;
+    }
+
+.job-box {
+    border: 1px dotted @faint_grey;
+    margin: 2px;
+    padding: 2px;
+    }
+
+.job-box h2,h3 {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    line-height: 20px;
+    }
+
+#columns-menu-0, #columns-menu-1 {
+    background-color: #FAF7F8;
+    margin-bottom: 5px;
+    }
+
+.columns-menu a {
+    padding-right: 5px;
+    }
+
+#cml-preview-panel-0,#cml-preview-panel-1 {
+    background-color:#FCFCFC;
+    border: 1px solid #ddd;
+    height: 110px;
+    overflow:auto;
+    }
+
+.field-container label {
+	width: 150px;
+    float:left;
+    text-align:left;
+    margin-left: 5px;
+}
+
+.wrapper {
+    overflow: auto;
+    width: auto;
+    }
+
+.column-left, .column-right {
+    width: 48%;
+    }
+    
+.column-left {
+    float: left;
+    border-right: 1px dashed #efefef;
+    }
+
+.column-right {
+    float: right;
+    margin-left: 0px;
+    padding-left: 0px;
+    clear: right;
+    }
+
+.warning {
+margin-left: 2px;
+color: #696565;
+    }
+
+.options-menu {
+	height: 30px;
+	margin: 2px;
+	clear:both;
+}
+
+.options-menu ul{
+	margin:0;
+	padding:0;
+}
+.options-menu ul li  {
+	margin:2px;
+	height:20px;
+}
+
+.options-menu li.link-menu a {
+	vertical-align:middle;
+}
+
+.options-menu li.link-menu {
+	width:150px;
+	text-align:center;
+	background-color:@fill_secondary;
+	
+	font-size:1em;
+	font-weight: bold;
+	border:1px solid #cdcdcd;
+	display:block;
+	float:left;
+}
+
+select#all-jobs {
+	width:300px;
+}
+
+
+#msg-frame {
+    clear: both;
+    height: 30px;
+    border: 1px solid #000;
+    padding: 3px;
+}
+
+
+/* 
+    jQuery UI - dialog for errors and confirmations
+    Replacement for ugly default alert
+*/
+.confirmation-head {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.confirmation-message {
+  font-size: 14px;
+  font-decoration: italics;
+  margin: 2px;
+  padding: 2px;
+}
